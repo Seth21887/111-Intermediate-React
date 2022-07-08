@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}User List{% endblock title %}
+
+{% block content %}
+<h1>Users</h1>
+<table class="table">
+    <thread>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user["id"] }}</td>
+            <td>{{ user["first_name"] }}</td>
+            <td>{{ user["last_name"] }}</td>
+            <td>{{ user["hobbies"] }}</td>
+            <td>{{ user["active"] }}</td>
+        </tr>
+            {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
