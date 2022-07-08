@@ -49,9 +49,8 @@ def insert(data):
 
     #SQL: UPDATE user set active=0 WHERE id=?
     def deactivate(id):
-
-
+        """ Soft delete user """
         cursor = get_db()
-        cursor.execute("UPDATE user set active=0 WHERE id=?", (id, ))
+        cursor.execute("UPDATE user set active=0 WHERE id=?", (id,))
         cursor.commit()
         cursor.close()

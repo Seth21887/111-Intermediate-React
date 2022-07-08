@@ -17,6 +17,6 @@ if __name__ == "__main__":
     if not id:
         print("Error, please provide an id")
 
-    #to do: validate the id
+    #to do: validate the id is an integer
 
     delete_user(id)
